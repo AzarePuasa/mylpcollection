@@ -3,19 +3,18 @@
 }
 
 .lplistitem{
-    border: 2px black solid;
+   /* border: 2px black solid;*/
 }
 
 .lplistitem-photo{
-    border: 2px blue dotted;
+    /*border: 2px blue dotted;*/
 }
 
 .lplistitem-album-artist{
-    border: 2px blue dotted;
-    text-align: left;
+    /*border: 2px blue dotted;*/
 }
 
 .lplistitem-rating{
-    border: 2px blue dotted;
+    /*border: 2px blue dotted;*/
     text-align: right;
 }
