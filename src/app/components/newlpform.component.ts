@@ -23,7 +23,5 @@ export class NewlpformComponent implements OnInit {
 
     //send out event.
     this.newlpItemSubmitted.next(form);
-
   }
-
 }
