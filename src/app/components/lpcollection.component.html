@@ -1,3 +1,22 @@
-<p>
-  lpcollection works!
-</p>
+<mat-list fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="space-between">
+    <mat-list-item *ngFor="let i of lpCollections; let n = index" class="lplistitem">
+            <!--Album Cover-->
+            <div fxFlex="grow" class="lplistitem-photo">
+                <img src="./assets/test-cover.png" class="thumbnail">
+            </div>
+
+            <!--Album Title & Artist Name-->
+            <div fxFlex="grow" class="lplistitem-album-artist">
+                
+                <span>{{i.albumName}}</span>
+                <br>
+                {{i.artistName}}
+                <span></span>
+            </div>
+
+            <!--Rating-->
+            <div fxFlex="grow" class="lplistitem-rating">
+                {{i.rating}}
+            </div>
+    </mat-list-item>
+</mat-list>

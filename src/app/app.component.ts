@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { LPItem } from './lpitem';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myLPCollection';
+  title = 'My LP Collection';
+
+  @Input()
+  lpItemsList: LPItem[];
+  
+
+  newlpItem($event: LPItem){
+    var item = $event.albumName
+    console.log("Received", item );
+    //this.lpItemsList.push();
+   
+  }
 }

@@ -1,3 +1,34 @@
-<p>
-  newlpform works!
-</p>
+<div>
+    <form #longplay="ngForm" (ngSubmit)="addNewLP(longplay)">
+        <!--Album Name-->
+        <mat-form-field>
+            <input matInput placeholder="Album Name" name="albumname" required ngModel>
+        </mat-form-field>
+
+        <br>
+        <!--Artist Name-->
+        <mat-form-field>
+            <input matInput placeholder="Artist Name" name="artistname" required ngModel>
+        </mat-form-field>
+
+        <!--Rating-->
+        <br>
+        <mat-slider min="0" max="10" step="1" aria-label="Slider in a tab" color="primary" value="50" thumbLabel aria-label="Primary color slider" name="rating" ngModel ></mat-slider>
+        
+        <br>
+        <!--Album Image Url-->
+        <mat-form-field>
+            <input matInput placeholder="Album Cover Image(Url)" name="albumimage" required ngModel>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="8px">
+            <button type="reset" mat-button mat-raised-button color="primary">
+              <mat-icon>clear</mat-icon> Clear 
+            </button>
+            <button type="submit" mat-button mat-raised-button color="warn">
+              <mat-icon>home</mat-icon> Add 
+            </button>
+          </div>
+
+    </form>
+</div>
