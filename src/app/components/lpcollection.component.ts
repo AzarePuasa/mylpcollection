@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LPItem } from '../lpitem';
 
 @Component({
@@ -17,6 +17,9 @@ export class LPCollectionComponent implements OnInit {
   {albumName: "Test3", artistName: "Test Name 3", rating: 3, albumCoverUrl: this.album_url_test},
   {albumName: "Test4", artistName: "Test Name 4", rating: 4, albumCoverUrl: this.album_url_test}
   ]
+
+  @Input()
+  lpItemCollection: LPItem[] = []
   
   constructor() { }
 

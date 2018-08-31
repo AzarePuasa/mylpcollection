@@ -10,24 +10,21 @@ import { NgForm } from '@angular/forms'
 export class NewlpformComponent implements OnInit {
 
   @Output() 
-  newlpItemSubmitted = new EventEmitter<LPItem>(); 
+  newlpItemSubmitted = new EventEmitter<NgForm>(); 
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  addNewLP(form: NgForm){
-    var newlpItem: LPItem;
-    
-    newlpItem = form.value 
+  addNewLP(form){
 
-    console.log("Rating:", newlpItem.rating )
+    console.log("Pushing out:", form);
 
-    console.log("Pushing out:", newlpItem ) 
-    
     //send out event.
-    this.newlpItemSubmitted.next(newlpItem);
+    this.newlpItemSubmitted.next(form);
+
+    form.reset();
   }
 
 }
